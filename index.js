@@ -24,7 +24,7 @@ var visualization = d3plus.viz()
  .draw();
 });
 
-var data = [
+var data_year = [
   {"year": 1991, "name":"alpha", "value": 15},
   {"year": 1992, "name":"alpha", "value": 34},
   {"year": 1991, "name":"alpha2", "value": 17},
@@ -45,7 +45,7 @@ var data = [
 
 var visualization = d3plus.viz()
         .container("#viz3")
-        .data(data)
+        .data(data_year)
         .type("box")
         .id(["year", "name"])
         .x({"value": "year", "padding": 0.3})
