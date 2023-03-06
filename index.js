@@ -44,14 +44,10 @@ var data = [
 ];
 
 var visualization = d3plus.viz()
-  .container("#viz3")
-  .data(data)
-  .type("box")
-  .id(["year"])
-  .x({"value": "year"})
-  .y({
-    "value": "value",
-    "scale": "linear",
-    "domain": [0, d3.max(data, function(d) { return d.value; })]
-  })
-  .draw();
+        .container("#viz3")
+        .data(data)
+        .type("box")
+        .id(["year", "name"])
+        .x({"value": "year", "padding": 0.3})
+        .y({"value": "value"})
+        .draw()
