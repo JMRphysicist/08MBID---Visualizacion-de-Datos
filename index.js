@@ -49,5 +49,9 @@ var visualization = d3plus.viz()
   .type("box")
   .id(["year"])
   .x({"value": "year"})
-  .y({"value": "value"})
+  .y({
+    "value": "value",
+    "scale": "linear",
+    "domain": [0, d3.max(data, function(d) { return d.value; })]
+  })
   .draw();
