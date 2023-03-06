@@ -44,10 +44,13 @@ var data_year = [
 ];
 
 var visualization = d3plus.viz()
-        .container("#viz3")
-        .data(data_year)
-        .type("box")
-        .id(["year", "name"])
-        .x({"value": "year", "padding": 0.3})
-        .y({"value": "value"})
-        .draw()
+  .container("#viz3")
+  .data(data)
+  .type("box")
+  .id(["year", "name"])
+  .groupBy("year", "name")
+  .x({"value": "year"})
+  .aggs({"value": ["median", "q1", "q3", "mean"]})
+  .y({"value": "value_q1", "grid": true, "zerofill": true, "scale": "linear"})
+  .legend(false)
+  .draw();
