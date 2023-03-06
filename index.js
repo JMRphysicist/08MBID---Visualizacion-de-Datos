@@ -47,7 +47,7 @@ var visualization = d3plus.viz()
   .container("#viz3")
   .data(data)
   .type("box")
-  .id(["year", "name"])
+  .id(["year"])
   .x({"value": "year"})
   .y({"value": "value"})
   .draw();
