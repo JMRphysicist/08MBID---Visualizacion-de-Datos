@@ -25,22 +25,22 @@ var visualization = d3plus.viz()
 });
 
 var data_year = [
-  {"year": 1991, "name":"alpha", "value": 15},
-  {"year": 1992, "name":"alpha", "value": 34},
-  {"year": 1991, "name":"alpha2", "value": 17},
-  {"year": 1992, "name":"alpha2", "value": 65},
-  {"year": 1991, "name":"beta", "value": 10},
-  {"year": 1992, "name":"beta", "value": 10},
-  {"year": 1991, "name":"beta2", "value": 40},
-  {"year": 1992, "name":"beta2", "value": 38},
-  {"year": 1991, "name":"gamma", "value": 5},
-  {"year": 1992, "name":"gamma", "value": 10},
-  {"year": 1991, "name":"gamma2", "value": 20},
-  {"year": 1992, "name":"gamma2", "value": 34},
-  {"year": 1991, "name":"delta", "value": 50},
-  {"year": 1992, "name":"delta", "value": 43},
-  {"year": 1991, "name":"delta2", "value": 17},
-  {"year": 1992, "name":"delta2", "value": 35}
+  {"year": 1991, "name":"alpha", "count": 15},
+  {"year": 1992, "name":"alpha", "count": 34},
+  {"year": 1991, "name":"alpha2", "count": 17},
+  {"year": 1992, "name":"alpha2", "count": 65},
+  {"year": 1991, "name":"beta", "count": 10},
+  {"year": 1992, "name":"beta", "count": 10},
+  {"year": 1991, "name":"beta2", "count": 40},
+  {"year": 1992, "name":"beta2", "count": 38},
+  {"year": 1991, "name":"gamma", "count": 5},
+  {"year": 1992, "name":"gamma", "count": 10},
+  {"year": 1991, "name":"gamma2", "count": 20},
+  {"year": 1992, "name":"gamma2", "count": 34},
+  {"year": 1991, "name":"delta", "count": 50},
+  {"year": 1992, "name":"delta", "count": 43},
+  {"year": 1991, "name":"delta2", "count": 17},
+  {"year": 1992, "name":"delta2", "count": 35}
 ];
 
 var visualization = d3plus.viz()
@@ -49,5 +49,5 @@ var visualization = d3plus.viz()
   .type("box")
   .id(["year"])
   .x({"value": "year"})
-  .y({"value": "value"})
+  .y({"value": "count"})
   .draw()
